@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ODM',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.ODM.v1" Alias="SAP__ODM"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="cds_ui_mdchgprocctr9902det" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="CTR9902Type" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MasterDataChangeProcess"/>
+                    <PropertyRef Name="MDChgProcessStep"/>
+                    <PropertyRef Name="MDChgProcessSrceSystem"/>
+                    <PropertyRef Name="MDChgProcessSrceObject"/>
+                </Key>
+                <Property Name="Delete_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Update_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="to_CTR9902T_oc" Type="Edm.Boolean" sap:label="Dynamic CbA-Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MasterDataChangeProcess" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="NonNegative" sap:label="Process ID" sap:quickinfo="Master Data Change Process Identifier" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessStep" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:label="Process Step Number" sap:quickinfo="Master Data Change Process Step Number" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessSrceSystem" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Source System" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessSrceObject" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Source ID" sap:quickinfo="Master Data Consolidation: ID of a Source Objects" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Country/Region Key"/>
+                <Property Name="CountryISOCode" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="ISO Code" sap:quickinfo="ISO Code of the Country/Region"/>
+                <Property Name="CountryThreeLetterISOCode" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="ISO Code 3 Char" sap:quickinfo="ISO Country/Region Code 3 Characters"/>
+                <Property Name="CountryThreeDigitISOCode" Type="Edm.String" MaxLength="3" sap:display-format="NonNegative" sap:label="ISO Code Num. 3" sap:quickinfo="ISO Country/Region Code Numeric 3-Characters"/>
+                <Property Name="IsEuropeanUnionMember" Type="Edm.Boolean" sap:label="EU Member" sap:quickinfo="Indicator: European Union Member?"/>
+                <Property Name="MDChgProcSrceLastChgdDateTime" Type="Edm.DateTimeOffset" Precision="0" sap:label="Last Changed On" sap:quickinfo="Master Data Consolidation: Recency" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessValidationStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Status" sap:quickinfo="Master Data Consolidation: Validation Status"/>
+                <Property Name="MDChgProcessSourceModified" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Modified" sap:quickinfo="Indicator: Source Record modified" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessSourceModifBinary" Type="Edm.Binary" MaxLength="64" sap:label="Modification" sap:quickinfo="Modification Indicator refering to a field's position" sap:creatable="false" sap:updatable="false"/>
+                <NavigationProperty Name="to_CTR9902T" Relationship="cds_ui_mdchgprocctr9902det.assoc_F8C822B7D37E57BDC425F7A931BA726D" FromRole="FromRole_assoc_F8C822B7D37E57BDC425F7A931BA726D" ToRole="ToRole_assoc_F8C822B7D37E57BDC425F7A931BA726D"/>
+                <NavigationProperty Name="to_RecordMessages" Relationship="cds_ui_mdchgprocctr9902det.assoc_FBED60A32207A5565E7FAF38A2DC14F7" FromRole="FromRole_assoc_FBED60A32207A5565E7FAF38A2DC14F7" ToRole="ToRole_assoc_FBED60A32207A5565E7FAF38A2DC14F7"/>
+                <NavigationProperty Name="to_RecordTarget" Relationship="cds_ui_mdchgprocctr9902det.assoc_495AC60E58F0BE0CCC15775C5993E7C6" FromRole="FromRole_assoc_495AC60E58F0BE0CCC15775C5993E7C6" ToRole="ToRole_assoc_495AC60E58F0BE0CCC15775C5993E7C6"/>
+            </EntityType>
+            <EntityType Name="CTR9902TType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MasterDataChangeProcess"/>
+                    <PropertyRef Name="MDChgProcessStep"/>
+                    <PropertyRef Name="MDChgProcessSrceSystem"/>
+                    <PropertyRef Name="MDChgProcessSrceObject"/>
+                    <PropertyRef Name="Language"/>
+                </Key>
+                <Property Name="Delete_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Update_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MasterDataChangeProcess" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="NonNegative" sap:label="Process ID" sap:quickinfo="Master Data Change Process Identifier" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessStep" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:label="Process Step Number" sap:quickinfo="Master Data Change Process Step Number" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessSrceSystem" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Source System" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessSrceObject" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Source ID" sap:quickinfo="Master Data Consolidation: ID of a Source Objects" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Language Key" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="CountryShortName" Type="Edm.String" MaxLength="15" sap:label="Country/Region Name" sap:quickinfo="Name of Country/Region (Short)"/>
+                <Property Name="NationalityName" Type="Edm.String" MaxLength="15" sap:label="Nationality"/>
+                <Property Name="CountryName" Type="Edm.String" MaxLength="50" sap:label="Country/Region Name"/>
+                <Property Name="NationalityLongName" Type="Edm.String" MaxLength="50" sap:label="Nationality (Long)" sap:quickinfo="Nationality (Max. 50 Characters)"/>
+                <Property Name="MDChgProcSrceLastChgdDateTime" Type="Edm.DateTimeOffset" Precision="0" sap:label="Last Changed On" sap:quickinfo="Master Data Consolidation: Recency" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessSourceModified" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Modified" sap:quickinfo="Indicator: Source Record modified" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessSourceModifBinary" Type="Edm.Binary" MaxLength="64" sap:label="Modification" sap:quickinfo="Modification Indicator refering to a field's position" sap:creatable="false" sap:updatable="false"/>
+                <NavigationProperty Name="to_CTR9902" Relationship="cds_ui_mdchgprocctr9902det.assoc_F8C822B7D37E57BDC425F7A931BA726D" FromRole="ToRole_assoc_F8C822B7D37E57BDC425F7A931BA726D" ToRole="FromRole_assoc_F8C822B7D37E57BDC425F7A931BA726D"/>
+                <NavigationProperty Name="to_RecordMessages" Relationship="cds_ui_mdchgprocctr9902det.assoc_7641C82B9FCB76BDB1D0A5B9F3F2C5C7" FromRole="FromRole_assoc_7641C82B9FCB76BDB1D0A5B9F3F2C5C7" ToRole="ToRole_assoc_7641C82B9FCB76BDB1D0A5B9F3F2C5C7"/>
+            </EntityType>
+            <EntityType Name="StepType" sap:label="Master Data Change Process Step" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MDChgProcessStepUUID"/>
+                </Key>
+                <Property Name="MDChgProcessStepUUID" Type="Edm.Guid" Nullable="false" sap:label="NodeID" sap:heading=""/>
+                <Property Name="MasterDataChangeProcessUUID" Type="Edm.Guid" sap:label="NodeID" sap:heading=""/>
+                <Property Name="MDChgProcessUpdateToken" Type="Edm.Int32" ConcurrencyMode="Fixed" sap:label="Update Token" sap:quickinfo="Master Data Change Process Update Token" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MasterDataChangeProcess" Type="Edm.String" MaxLength="12" sap:display-format="NonNegative" sap:label="Process ID" sap:quickinfo="Master Data Change Process Identifier"/>
+                <Property Name="MDChgProcessStep" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Process Step Number" sap:quickinfo="Master Data Change Process Step Number" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessStepType" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Process Step Type" sap:quickinfo="Master Data Change Process Step Type" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessStepDescription" Type="Edm.String" MaxLength="73" sap:label="Message Text" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessStepStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Step Status" sap:quickinfo="Master Data Change Process Status of Process Step" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChangeProcessStepHasError" Type="Edm.Boolean" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcStepNumberOfWarnings" Type="Edm.Int32" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcessStepNumberOfErrors" Type="Edm.Int32" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcStpNumberOfExceptions" Type="Edm.Int32" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcModifdObjectsCount" Type="Edm.Int32" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcStpProgressRatioInPct" Type="Edm.Decimal" Precision="3" Scale="0" sap:unit="MDChangeProcStepProgressUnit" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChangeProcStepProgressUnit" Type="Edm.String" MaxLength="3" sap:label="Internal UoM" sap:quickinfo="Unit of Measurement" sap:creatable="false" sap:updatable="false" sap:semantics="unit-of-measure"/>
+                <Property Name="MDChgProcessStepAdapter" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Step Adapter" sap:quickinfo="Master Data Change Process Adapter Class Name"/>
+                <Property Name="MDChgProcessStepAdapterConfign" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Configuration ID" sap:quickinfo="Master Data Change Process Step Adapter Configuration ID"/>
+                <Property Name="MDChgProcessStepChkPointIsActv" Type="Edm.Boolean" sap:label="Check Point active" sap:quickinfo="Master Data Change Process - Check Point Active Indicator"/>
+                <Property Name="MDChgProcessStepOriglNumber" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Process Step Number" sap:quickinfo="Master Data Change Process Step Number" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessStepOriglSqncNmbr" Type="Edm.Byte" sap:label="Step Sequence" sap:quickinfo="Master Data Change Process Step Sequence" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessStepStartIsReqd" Type="Edm.Boolean" sap:label="Start Requested" sap:quickinfo="Master Data Change Process Is Start Requested" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessSrceObjectTypeCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Bus. Obj. Type" sap:quickinfo="Master Data Change Process Business Object Type Code" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessStepFilterChain" Type="Edm.String" MaxLength="255" sap:label="Filter Chain" sap:quickinfo="Master Data Change Process Filter Chain for Authorization" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessStepStartDateTime" Type="Edm.Decimal" Precision="15" Scale="0" sap:label="Step started at" sap:quickinfo="Master Data Change Process Time Stamp for Process Start" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessStepFinishDateTime" Type="Edm.Decimal" Precision="15" Scale="0" sap:label="Step completed at" sap:quickinfo="Master Data Change Process Time Stamp for Process Completion" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessStepConfign" Type="Edm.Guid" sap:label="Config. UUID" sap:quickinfo="Master Data Change Process Configuration UUID"/>
+                <Property Name="MDChgProcessStpOwnConfignIsRqd" Type="Edm.Boolean" sap:label="Use Own" sap:quickinfo="Master Data Change Process Indicator for manual config."/>
+                <Property Name="MDChangeProcessStepIsTransient" Type="Edm.Boolean" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcIsAdhocStep" Type="Edm.Boolean" sap:label="Ad hoc Step" sap:quickinfo="Indicator for Ad hoc Step"/>
+                <Property Name="MDChgProcStepScheduleIsRecmdd" Type="Edm.Boolean" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcessSrceSystem" Type="Edm.String" MaxLength="60" sap:label="Source System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcessSrceObject" Type="Edm.String" MaxLength="60" sap:label="Source ID" sap:quickinfo="Master Data Consolidation: ID of a Source Objects" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcStepIsRollbackAllowed" Type="Edm.Boolean" sap:label="TRUE" sap:quickinfo="Data element for domain BOOLE: TRUE (='X') and FALSE (=' ')" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcessStepWrkflwDefID" Type="Edm.String" MaxLength="255" sap:label="Ext Workflow ID" sap:quickinfo="CP WF Integration: CP Workflow Definition ID" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessStepWrkflwHandle" Type="Edm.Guid" sap:display-format="UpperCase" sap:label="CPWF Handle ID" sap:quickinfo="CP WF Integration: workflow handle in CMP process step"/>
+                <Property Name="MDChgProcessStepWrkflwSts" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Status" sap:quickinfo="CP WF Integration: CP Workflow Status"/>
+                <Property Name="MDChgProcessStepWrkflwOvrlDcsn" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Workflow Decision" sap:quickinfo="Decision made in a workflow assigned to a MD process step"/>
+            </EntityType>
+            <EntityType Name="C_MDChangeProcessGoalValueHelpType" sap:label="MD Change Process Goal Value Help" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MDChgProcessGoal"/>
+                </Key>
+                <Property Name="MDChgProcessGoal" Type="Edm.String" Nullable="false" MaxLength="1" sap:display-format="UpperCase" sap:text="MDChgProcessGoal_Text" sap:label="Category" sap:quickinfo="Master Data Change Process Goal"/>
+                <Property Name="MDChgProcessGoal_Text" Type="Edm.String" MaxLength="60" sap:label="Change Process Goal" sap:quickinfo="Short Text for Fixed Values" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="RecordTargetType" sap:label="Master Data Change Process Record Target" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MasterDataChangeProcess"/>
+                    <PropertyRef Name="MDChgProcessSrceSystem"/>
+                    <PropertyRef Name="MDChgProcessSrceObject"/>
+                    <PropertyRef Name="MDChgProcessSrceObjectTypeCode"/>
+                </Key>
+                <Property Name="MasterDataChangeProcess" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="NonNegative" sap:label="Process ID" sap:quickinfo="Master Data Change Process Identifier"/>
+                <Property Name="MDChgProcessSrceSystem" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Source System"/>
+                <Property Name="MDChgProcessSrceObject" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Source ID" sap:quickinfo="Master Data Consolidation: ID of a Source Objects"/>
+                <Property Name="MDChgProcessSrceObjectTypeCode" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Bus. Obj. Type" sap:quickinfo="Master Data Change Process Business Object Type Code"/>
+                <Property Name="MDChgProcessActivationTarget" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Match Groups" sap:quickinfo="Master Data Change Process Activation Target Match Groups"/>
+                <Property Name="MDChgProcChangeRequestID" Type="Edm.String" MaxLength="12" sap:display-format="NonNegative" sap:label="CR-ID f. rep. msg." sap:quickinfo="Change Request ID created for a replication message"/>
+                <Property Name="MDChangeProcessActiveID" Type="Edm.String" MaxLength="60" sap:display-format="UpperCase" sap:label="Active object ID" sap:quickinfo="ID of an active object"/>
+            </EntityType>
+            <EntityType Name="ProcessCTR9902DetailsType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MDChgProcessStepUUID"/>
+                </Key>
+                <Property Name="Update_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcessStepUUID" Type="Edm.Guid" Nullable="false" sap:label="NodeID" sap:heading="" sap:updatable="false"/>
+                <Property Name="MasterDataChangeProcessUUID" Type="Edm.Guid" sap:label="NodeID" sap:heading=""/>
+                <Property Name="MasterDataChangeProcess" Type="Edm.String" MaxLength="12" sap:display-format="NonNegative" sap:label="Process ID" sap:quickinfo="Master Data Change Process Identifier"/>
+                <Property Name="MDChgProcessStep" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Process Step Number" sap:quickinfo="Master Data Change Process Step Number"/>
+                <Property Name="MDChgProcessSrceObjectTypeCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Bus. Obj. Type" sap:quickinfo="Master Data Change Process Business Object Type Code"/>
+                <Property Name="MDChgProcessStepType" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:text="MDChgProcessStepTypeName" sap:label="Process Step" sap:quickinfo="Master Data Change Process Step Type"/>
+                <Property Name="MDChgProcessStepDescription" Type="Edm.String" MaxLength="40" sap:label="Step Type Descr." sap:quickinfo="Master Data Change Process Step Type Description"/>
+                <Property Name="MDChgProcessStepStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Step Status" sap:quickinfo="Master Data Change Process Status of Process Step"/>
+                <Property Name="MDChgProcessStepAdapter" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Step Adapter" sap:quickinfo="Master Data Change Process Adapter Class Name"/>
+                <Property Name="MDChgProcessStepAdapterConfign" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Configuration ID" sap:quickinfo="Master Data Change Process Step Adapter Configuration ID"/>
+                <Property Name="MDChgProcessStepChkPointIsActv" Type="Edm.Boolean" sap:label="Check Point active" sap:quickinfo="Master Data Change Process - Check Point Active Indicator"/>
+                <Property Name="MDChgProcessStepOriglNumber" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Process Step Number" sap:quickinfo="Master Data Change Process Step Number"/>
+                <Property Name="MDChgProcessStepOriglSqncNmbr" Type="Edm.Byte" sap:label="Step Sequence" sap:quickinfo="Master Data Change Process Step Sequence"/>
+                <Property Name="MDChgProcessStepStartIsReqd" Type="Edm.Boolean" sap:label="Start Requested" sap:quickinfo="Master Data Change Process Is Start Requested"/>
+                <Property Name="MDChgProcessStepFilterChain" Type="Edm.String" MaxLength="255" sap:label="Filter Chain" sap:quickinfo="Master Data Change Process Filter Chain for Authorization"/>
+                <Property Name="MDChgProcessStepStartDateTime" Type="Edm.DateTimeOffset" Precision="0" sap:label="Step started at" sap:quickinfo="Master Data Change Process Time Stamp for Process Start"/>
+                <Property Name="MDChgProcessStepFinishDateTime" Type="Edm.DateTimeOffset" Precision="0" sap:label="Step completed at" sap:quickinfo="Master Data Change Process Time Stamp for Process Completion"/>
+                <Property Name="MDChgProcessStepConfign" Type="Edm.Guid" sap:label="Config. UUID" sap:quickinfo="Master Data Change Process Configuration UUID"/>
+                <Property Name="MDChgProcessStpOwnConfignIsRqd" Type="Edm.Boolean" sap:label="Use Own" sap:quickinfo="Master Data Change Process Indicator for manual config."/>
+                <Property Name="MDChgProcessDescription" Type="Edm.String" MaxLength="40" sap:label="Process Description" sap:quickinfo="Master Data Change Process Description" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessGoal" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:text="MDChgProcessGoalName" sap:label="Process Goal" sap:quickinfo="Master Data Change Process Goal" sap:value-list="fixed-values"/>
+                <Property Name="MDChgProcessGoalName" Type="Edm.String" MaxLength="60" sap:label="Change Process Goal" sap:quickinfo="Short Text for Fixed Values" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcessNmbrOfSrceRecords" Type="Edm.Int32" sap:label="Records"/>
+                <Property Name="MDChgProcessCurrentStepNumber" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Process Step Number" sap:quickinfo="Master Data Change Process Step Number"/>
+                <Property Name="MDChgProcessStepWrkflwDefID" Type="Edm.String" MaxLength="255" sap:label="Ext Workflow ID" sap:quickinfo="CP WF Integration: CP Workflow Definition ID"/>
+                <Property Name="MDChgProcessStepWrkflwHandle" Type="Edm.Guid" sap:display-format="UpperCase" sap:label="CPWF Handle ID" sap:quickinfo="CP WF Integration: workflow handle in CMP process step"/>
+                <Property Name="MDChgProcessStepWrkflwSts" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Status" sap:quickinfo="CP WF Integration: CP Workflow Status"/>
+                <Property Name="MDChgProcessStepWrkflwOvrlDcsn" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Workflow Decision" sap:quickinfo="Decision made in a workflow assigned to a MD process step"/>
+                <Property Name="MDChgProcessStepTypeName" Type="Edm.String" MaxLength="40" sap:label="MD Change Process Step Type" sap:quickinfo="MDC medium description" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MDChgProcEditIsVisible" Type="Edm.Boolean" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcExportIsVisible" Type="Edm.Boolean" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcStepIsAfterFederation" Type="Edm.Boolean" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcCTR9902TIsHidden" Type="Edm.Boolean" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="to_CTR9902" Relationship="cds_ui_mdchgprocctr9902det.assoc_B2A6B90EF6F8663FD3B63F2459EB7EC5" FromRole="FromRole_assoc_B2A6B90EF6F8663FD3B63F2459EB7EC5" ToRole="ToRole_assoc_B2A6B90EF6F8663FD3B63F2459EB7EC5"/>
+                <NavigationProperty Name="to_CTR9902T" Relationship="cds_ui_mdchgprocctr9902det.assoc_44B4EDAFAE314AA9FF419931167A1747" FromRole="FromRole_assoc_44B4EDAFAE314AA9FF419931167A1747" ToRole="ToRole_assoc_44B4EDAFAE314AA9FF419931167A1747"/>
+            </EntityType>
+            <EntityType Name="RecordMessagesType" sap:label="Master Data Change Process Record Message" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MDChgProcMessageLogHandle"/>
+                    <PropertyRef Name="MDChgProcMsgNumberLogHandle"/>
+                </Key>
+                <Property Name="MDChgProcMessageLogHandle" Type="Edm.Guid" Nullable="false" sap:label="Handle" sap:quickinfo="Application Log: Log Handle"/>
+                <Property Name="MDChgProcMsgNumberLogHandle" Type="Edm.String" Nullable="false" MaxLength="6" sap:display-format="NonNegative" sap:label="Message Serial No." sap:quickinfo="Application Log: Internal Message Serial Number"/>
+                <Property Name="MasterDataChangeProcess" Type="Edm.String" MaxLength="12" sap:display-format="NonNegative" sap:label="Process ID" sap:quickinfo="Master Data Change Process Identifier"/>
+                <Property Name="MDChgProcessStep" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Process Step Number" sap:quickinfo="Master Data Change Process Step Number"/>
+                <Property Name="MDChgProcessSrceSystem" Type="Edm.String" MaxLength="60" sap:label="Source System"/>
+                <Property Name="MDChgProcessSrceObject" Type="Edm.String" MaxLength="60" sap:label="Source ID" sap:quickinfo="Master Data Consolidation: ID of a Source Objects"/>
+                <Property Name="MDChangeProcessMessageType" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Message Type"/>
+                <Property Name="MDChangeProcessMessageID" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Message Class"/>
+                <Property Name="MDChangeProcessMessageNumber" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Message Number" sap:quickinfo="System Message Number"/>
+                <Property Name="SystemMessageVariable1" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Message Variable"/>
+                <Property Name="SystemMessageVariable2" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Message Variable"/>
+                <Property Name="SystemMessageVariable3" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Message Variable"/>
+                <Property Name="SystemMessageVariable4" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Message Variable"/>
+                <Property Name="MDChgProcessMessageText" Type="Edm.String" MaxLength="1333" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MDChgProcessMessageLongTextURL" Type="Edm.String" MaxLength="1333" sap:label="Longtext URL" sap:quickinfo="MDC Message Longtext URL" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__Currency" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CurrencyCode"/>
+                </Key>
+                <Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:semantics="currency-code"/>
+                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO code"/>
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="15" sap:label="Short Text"/>
+                <Property Name="DecimalPlaces" Type="Edm.Byte" Nullable="false" sap:label="Decimals"/>
+            </EntityType>
+            <EntityType Name="SAP__UnitOfMeasure" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="UnitCode"/>
+                </Key>
+                <Property Name="UnitCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Internal UoM" sap:semantics="unit-of-measure"/>
+                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO Code"/>
+                <Property Name="ExternalCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Commercial"/>
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Meas. Unit Text"/>
+                <Property Name="DecimalPlaces" Type="Edm.Int16" sap:label="Decimal Places"/>
+            </EntityType>
+            <EntityType Name="SAP__DocumentDescription" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID"/>
+                <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="CreatedAt" Type="Edm.DateTime" Nullable="false" Precision="0" sap:label="Time Stamp"/>
+                <Property Name="FileName" Type="Edm.String" Nullable="false" MaxLength="256"/>
+                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="256"/>
+                <NavigationProperty Name="Format" Relationship="cds_ui_mdchgprocctr9902det.to_format" FromRole="FromRole_to_format" ToRole="ToRole_to_format"/>
+                <NavigationProperty Name="FileShare" Relationship="cds_ui_mdchgprocctr9902det.to_fileshare" FromRole="FromRole_to_fileshare" ToRole="ToRole_to_fileshare"/>
+                <NavigationProperty Name="TableColumns" Relationship="cds_ui_mdchgprocctr9902det.to_tablecolumns" FromRole="FromRole_to_tablecolumns" ToRole="ToRole_to_tablecolumns"/>
+                <NavigationProperty Name="CoverPage" Relationship="cds_ui_mdchgprocctr9902det.to_coverpage" FromRole="FromRole_to_coverpage" ToRole="ToRole_to_coverpage"/>
+                <NavigationProperty Name="Signature" Relationship="cds_ui_mdchgprocctr9902det.to_signature" FromRole="FromRole_to_signature" ToRole="ToRole_to_signature"/>
+                <NavigationProperty Name="PDFStandard" Relationship="cds_ui_mdchgprocctr9902det.to_pdfstandard" FromRole="FromRole_to_pdfstandard" ToRole="ToRole_to_pdfstandard"/>
+                <NavigationProperty Name="Hierarchy" Relationship="cds_ui_mdchgprocctr9902det.to_Hierarchy" FromRole="FromRole_to_Hierarchy" ToRole="ToRole_to_Hierarchy"/>
+                <NavigationProperty Name="Header" Relationship="cds_ui_mdchgprocctr9902det.to_header" FromRole="FromRole_to_header" ToRole="ToRole_to_header"/>
+                <NavigationProperty Name="Footer" Relationship="cds_ui_mdchgprocctr9902det.to_Footer" FromRole="FromRole_to_Footer" ToRole="ToRole_to_Footer"/>
+            </EntityType>
+            <EntityType Name="SAP__FileShare" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Repository" Type="Edm.String" Nullable="false" MaxLength="100" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Folder" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__Format" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="FitToPage" Type="cds_ui_mdchgprocctr9902det.SAP__FitToPage" Nullable="false"/>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FontSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Orientation" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PaperSize" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BorderSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MarginSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FontName" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Font Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Padding" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TextDirectionLayout" Type="Edm.String" Nullable="false" MaxLength="40" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__PDFStandard" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UsePDFAConformance" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DoEnableAccessibility" Type="Edm.Boolean" Nullable="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__TableColumns" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                    <PropertyRef Name="Name"/>
+                    <PropertyRef Name="Header"/>
+                </Key>
+                <Property Name="Format" Type="cds_ui_mdchgprocctr9902det.SAP__TableColumnFormat" Nullable="false"/>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Header" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HorizontalAlignment" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__CoverPage" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Title"/>
+                    <PropertyRef Name="Id"/>
+                    <PropertyRef Name="Name"/>
+                </Key>
+                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__Signature" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DoSign" Type="Edm.Boolean" Nullable="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reason" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__Hierarchy" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DistanceFromRootElement" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DrillStateElement" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__PDFHeader" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Right" Type="cds_ui_mdchgprocctr9902det.SAP__HeaderFooterField" Nullable="false"/>
+                <Property Name="Left" Type="cds_ui_mdchgprocctr9902det.SAP__HeaderFooterField" Nullable="false"/>
+                <Property Name="Center" Type="cds_ui_mdchgprocctr9902det.SAP__HeaderFooterField" Nullable="false"/>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__PDFFooter" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Right" Type="cds_ui_mdchgprocctr9902det.SAP__HeaderFooterField" Nullable="false"/>
+                <Property Name="Left" Type="cds_ui_mdchgprocctr9902det.SAP__HeaderFooterField" Nullable="false"/>
+                <Property Name="Center" Type="cds_ui_mdchgprocctr9902det.SAP__HeaderFooterField" Nullable="false"/>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__ValueHelp" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="VALUEHELP"/>
+                </Key>
+                <Property Name="VALUEHELP" Type="Edm.String" Nullable="false"/>
+                <Property Name="FIELD_VALUE" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="DESCRIPTION" Type="Edm.String"/>
+            </EntityType>
+            <ComplexType Name="Itmdchgprocessgetgradesresult">
+                <Property Name="Class" Type="Edm.String" MaxLength="1" sap:label="Problem Class"/>
+                <Property Name="Id" Type="Edm.String" MaxLength="20" sap:label="Message Class"/>
+                <Property Name="Number" Type="Edm.String" MaxLength="3" sap:label="Message Number"/>
+                <Property Name="Count" Type="Edm.Int32" sap:label="Count"/>
+                <Property Name="Label" Type="Edm.String" sap:label="Description"/>
+                <Property Name="Evaluable" Type="Edm.Boolean" sap:label="Evaluable"/>
+                <Property Name="Longtexturl" Type="Edm.String" sap:label="Description"/>
+            </ComplexType>
+            <ComplexType Name="SAP__FitToPage">
+                <Property Name="ErrorRecoveryBehavior" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Error behavior" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IsEnabled" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MinimumFontSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </ComplexType>
+            <ComplexType Name="SAP__TableColumnFormat">
+                <Property Name="DisplayFormat" Type="Edm.String" Nullable="false" MaxLength="40" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IANATimezone" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IANATimezoneProperty" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </ComplexType>
+            <ComplexType Name="SAP__HeaderFooterField">
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </ComplexType>
+            <Association Name="assoc_B2A6B90EF6F8663FD3B63F2459EB7EC5" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType" Multiplicity="1" Role="FromRole_assoc_B2A6B90EF6F8663FD3B63F2459EB7EC5"/>
+                <End Type="cds_ui_mdchgprocctr9902det.CTR9902Type" Multiplicity="*" Role="ToRole_assoc_B2A6B90EF6F8663FD3B63F2459EB7EC5"/>
+            </Association>
+            <Association Name="assoc_44B4EDAFAE314AA9FF419931167A1747" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType" Multiplicity="1" Role="FromRole_assoc_44B4EDAFAE314AA9FF419931167A1747"/>
+                <End Type="cds_ui_mdchgprocctr9902det.CTR9902TType" Multiplicity="*" Role="ToRole_assoc_44B4EDAFAE314AA9FF419931167A1747"/>
+            </Association>
+            <Association Name="assoc_FBED60A32207A5565E7FAF38A2DC14F7" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.CTR9902Type" Multiplicity="1" Role="FromRole_assoc_FBED60A32207A5565E7FAF38A2DC14F7"/>
+                <End Type="cds_ui_mdchgprocctr9902det.RecordMessagesType" Multiplicity="*" Role="ToRole_assoc_FBED60A32207A5565E7FAF38A2DC14F7"/>
+            </Association>
+            <Association Name="assoc_495AC60E58F0BE0CCC15775C5993E7C6" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.CTR9902Type" Multiplicity="1" Role="FromRole_assoc_495AC60E58F0BE0CCC15775C5993E7C6"/>
+                <End Type="cds_ui_mdchgprocctr9902det.RecordTargetType" Multiplicity="0..1" Role="ToRole_assoc_495AC60E58F0BE0CCC15775C5993E7C6"/>
+            </Association>
+            <Association Name="assoc_F8C822B7D37E57BDC425F7A931BA726D" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.CTR9902Type" Multiplicity="1" Role="FromRole_assoc_F8C822B7D37E57BDC425F7A931BA726D">
+                    <OnDelete Action="Cascade"/>
+                </End>
+                <End Type="cds_ui_mdchgprocctr9902det.CTR9902TType" Multiplicity="*" Role="ToRole_assoc_F8C822B7D37E57BDC425F7A931BA726D"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_assoc_F8C822B7D37E57BDC425F7A931BA726D">
+                        <PropertyRef Name="MDChgProcessSrceObject"/>
+                        <PropertyRef Name="MDChgProcessSrceSystem"/>
+                        <PropertyRef Name="MDChgProcessStep"/>
+                        <PropertyRef Name="MasterDataChangeProcess"/>
+                    </Principal>
+                    <Dependent Role="ToRole_assoc_F8C822B7D37E57BDC425F7A931BA726D">
+                        <PropertyRef Name="MDChgProcessSrceObject"/>
+                        <PropertyRef Name="MDChgProcessSrceSystem"/>
+                        <PropertyRef Name="MDChgProcessStep"/>
+                        <PropertyRef Name="MasterDataChangeProcess"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="assoc_7641C82B9FCB76BDB1D0A5B9F3F2C5C7" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.CTR9902TType" Multiplicity="1" Role="FromRole_assoc_7641C82B9FCB76BDB1D0A5B9F3F2C5C7"/>
+                <End Type="cds_ui_mdchgprocctr9902det.RecordMessagesType" Multiplicity="*" Role="ToRole_assoc_7641C82B9FCB76BDB1D0A5B9F3F2C5C7"/>
+            </Association>
+            <Association Name="to_format" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_format"/>
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__Format" Multiplicity="1" Role="ToRole_to_format"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_format">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_format">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_fileshare" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_fileshare"/>
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__FileShare" Multiplicity="1" Role="ToRole_to_fileshare"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_fileshare">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_fileshare">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_tablecolumns" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_tablecolumns"/>
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__TableColumns" Multiplicity="*" Role="ToRole_to_tablecolumns"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_tablecolumns">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_tablecolumns">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_coverpage" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_coverpage"/>
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__CoverPage" Multiplicity="*" Role="ToRole_to_coverpage"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_coverpage">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_coverpage">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_signature" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_signature"/>
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__Signature" Multiplicity="1" Role="ToRole_to_signature"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_signature">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_signature">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_pdfstandard" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_pdfstandard"/>
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__PDFStandard" Multiplicity="1" Role="ToRole_to_pdfstandard"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_pdfstandard">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_pdfstandard">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_Hierarchy" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_Hierarchy"/>
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__Hierarchy" Multiplicity="1" Role="ToRole_to_Hierarchy"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_Hierarchy">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_Hierarchy">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_header" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_header"/>
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__PDFHeader" Multiplicity="1" Role="ToRole_to_header"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_header">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_header">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_Footer" sap:content-version="1">
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_Footer"/>
+                <End Type="cds_ui_mdchgprocctr9902det.SAP__PDFFooter" Multiplicity="1" Role="ToRole_to_Footer"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_Footer">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_Footer">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="cds_ui_mdchgprocctr9902det_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx pdf">
+                <EntitySet Name="CTR9902" EntityType="cds_ui_mdchgprocctr9902det.CTR9902Type" sap:content-version="1" sap:deletable-path="Delete_mc" sap:updatable-path="Update_mc"/>
+                <EntitySet Name="CTR9902T" EntityType="cds_ui_mdchgprocctr9902det.CTR9902TType" sap:content-version="1" sap:deletable-path="Delete_mc" sap:updatable-path="Update_mc"/>
+                <EntitySet Name="Step" EntityType="cds_ui_mdchgprocctr9902det.StepType" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="C_MDChangeProcessGoalValueHelp" EntityType="cds_ui_mdchgprocctr9902det.C_MDChangeProcessGoalValueHelpType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="RecordTarget" EntityType="cds_ui_mdchgprocctr9902det.RecordTargetType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ProcessCTR9902Details" EntityType="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType" sap:creatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1" sap:updatable-path="Update_mc"/>
+                <EntitySet Name="RecordMessages" EntityType="cds_ui_mdchgprocctr9902det.RecordMessagesType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__FormatSet" EntityType="cds_ui_mdchgprocctr9902det.SAP__Format" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__PDFStandardSet" EntityType="cds_ui_mdchgprocctr9902det.SAP__PDFStandard" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__TableColumnsSet" EntityType="cds_ui_mdchgprocctr9902det.SAP__TableColumns" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__CoverPageSet" EntityType="cds_ui_mdchgprocctr9902det.SAP__CoverPage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__SignatureSet" EntityType="cds_ui_mdchgprocctr9902det.SAP__Signature" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__HierarchySet" EntityType="cds_ui_mdchgprocctr9902det.SAP__Hierarchy" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__PDFHeaderSet" EntityType="cds_ui_mdchgprocctr9902det.SAP__PDFHeader" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__PDFFooterSet" EntityType="cds_ui_mdchgprocctr9902det.SAP__PDFFooter" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__ValueHelpSet" EntityType="cds_ui_mdchgprocctr9902det.SAP__ValueHelp" sap:content-version="1"/>
+                <EntitySet Name="SAP__Currencies" EntityType="cds_ui_mdchgprocctr9902det.SAP__Currency" sap:content-version="1"/>
+                <EntitySet Name="SAP__UnitsOfMeasure" EntityType="cds_ui_mdchgprocctr9902det.SAP__UnitOfMeasure" sap:content-version="1"/>
+                <EntitySet Name="SAP__MyDocumentDescriptions" EntityType="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription" sap:content-version="1"/>
+                <EntitySet Name="SAP__FileShareSet" EntityType="cds_ui_mdchgprocctr9902det.SAP__FileShare" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <AssociationSet Name="assoc_B2A6B90EF6F8663FD3B63F2459EB7EC5" Association="cds_ui_mdchgprocctr9902det.assoc_B2A6B90EF6F8663FD3B63F2459EB7EC5" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ProcessCTR9902Details" Role="FromRole_assoc_B2A6B90EF6F8663FD3B63F2459EB7EC5"/>
+                    <End EntitySet="CTR9902" Role="ToRole_assoc_B2A6B90EF6F8663FD3B63F2459EB7EC5"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_495AC60E58F0BE0CCC15775C5993E7C6" Association="cds_ui_mdchgprocctr9902det.assoc_495AC60E58F0BE0CCC15775C5993E7C6" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="CTR9902" Role="FromRole_assoc_495AC60E58F0BE0CCC15775C5993E7C6"/>
+                    <End EntitySet="RecordTarget" Role="ToRole_assoc_495AC60E58F0BE0CCC15775C5993E7C6"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_FBED60A32207A5565E7FAF38A2DC14F7" Association="cds_ui_mdchgprocctr9902det.assoc_FBED60A32207A5565E7FAF38A2DC14F7" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="CTR9902" Role="FromRole_assoc_FBED60A32207A5565E7FAF38A2DC14F7"/>
+                    <End EntitySet="RecordMessages" Role="ToRole_assoc_FBED60A32207A5565E7FAF38A2DC14F7"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_44B4EDAFAE314AA9FF419931167A1747" Association="cds_ui_mdchgprocctr9902det.assoc_44B4EDAFAE314AA9FF419931167A1747" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ProcessCTR9902Details" Role="FromRole_assoc_44B4EDAFAE314AA9FF419931167A1747"/>
+                    <End EntitySet="CTR9902T" Role="ToRole_assoc_44B4EDAFAE314AA9FF419931167A1747"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_F8C822B7D37E57BDC425F7A931BA726D" Association="cds_ui_mdchgprocctr9902det.assoc_F8C822B7D37E57BDC425F7A931BA726D" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="CTR9902" Role="FromRole_assoc_F8C822B7D37E57BDC425F7A931BA726D"/>
+                    <End EntitySet="CTR9902T" Role="ToRole_assoc_F8C822B7D37E57BDC425F7A931BA726D"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_7641C82B9FCB76BDB1D0A5B9F3F2C5C7" Association="cds_ui_mdchgprocctr9902det.assoc_7641C82B9FCB76BDB1D0A5B9F3F2C5C7" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="CTR9902T" Role="FromRole_assoc_7641C82B9FCB76BDB1D0A5B9F3F2C5C7"/>
+                    <End EntitySet="RecordMessages" Role="ToRole_assoc_7641C82B9FCB76BDB1D0A5B9F3F2C5C7"/>
+                </AssociationSet>
+                <AssociationSet Name="to_HierarchySet" Association="cds_ui_mdchgprocctr9902det.to_Hierarchy" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_Hierarchy"/>
+                    <End EntitySet="SAP__HierarchySet" Role="ToRole_to_Hierarchy"/>
+                </AssociationSet>
+                <AssociationSet Name="to_tablecolumnsSet" Association="cds_ui_mdchgprocctr9902det.to_tablecolumns" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_tablecolumns"/>
+                    <End EntitySet="SAP__TableColumnsSet" Role="ToRole_to_tablecolumns"/>
+                </AssociationSet>
+                <AssociationSet Name="to_headerSet" Association="cds_ui_mdchgprocctr9902det.to_header" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_header"/>
+                    <End EntitySet="SAP__PDFHeaderSet" Role="ToRole_to_header"/>
+                </AssociationSet>
+                <AssociationSet Name="to_FooterSet" Association="cds_ui_mdchgprocctr9902det.to_Footer" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_Footer"/>
+                    <End EntitySet="SAP__PDFFooterSet" Role="ToRole_to_Footer"/>
+                </AssociationSet>
+                <AssociationSet Name="to_formatSet" Association="cds_ui_mdchgprocctr9902det.to_format" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_format"/>
+                    <End EntitySet="SAP__FormatSet" Role="ToRole_to_format"/>
+                </AssociationSet>
+                <AssociationSet Name="to_fileshareSet" Association="cds_ui_mdchgprocctr9902det.to_fileshare" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_fileshare"/>
+                    <End EntitySet="SAP__FileShareSet" Role="ToRole_to_fileshare"/>
+                </AssociationSet>
+                <AssociationSet Name="to_pdfstandardSet" Association="cds_ui_mdchgprocctr9902det.to_pdfstandard" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_pdfstandard"/>
+                    <End EntitySet="SAP__PDFStandardSet" Role="ToRole_to_pdfstandard"/>
+                </AssociationSet>
+                <AssociationSet Name="to_signatureSet" Association="cds_ui_mdchgprocctr9902det.to_signature" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_signature"/>
+                    <End EntitySet="SAP__SignatureSet" Role="ToRole_to_signature"/>
+                </AssociationSet>
+                <AssociationSet Name="to_coverpageSet" Association="cds_ui_mdchgprocctr9902det.to_coverpage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_coverpage"/>
+                    <End EntitySet="SAP__CoverPageSet" Role="ToRole_to_coverpage"/>
+                </AssociationSet>
+                <FunctionImport Name="GetProcessStepGrades" ReturnType="Collection(cds_ui_mdchgprocctr9902det.Itmdchgprocessgetgradesresult)" m:HttpMethod="POST">
+                    <Parameter Name="Processuuid" Type="Edm.Guid" Mode="In" sap:label="NodeID"/>
+                    <Parameter Name="Stepuuid" Type="Edm.Guid" Mode="In" sap:label="NodeID"/>
+                    <Parameter Name="Filter" Type="Edm.String" Mode="In" sap:label="Step Filter String"/>
+                </FunctionImport>
+            </EntityContainer>
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessGoal" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Process Goal"/>
+                        <PropertyValue Property="CollectionPath" String="C_MDChangeProcessGoalValueHelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="MDChgProcessGoal"/>
+                                    <PropertyValue Property="ValueListProperty" String="MDChgProcessGoal"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="MDChgProcessGoal_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.cds_ui_mdchgprocctr9902det_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/to_CTR9902T" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Composition"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.cds_ui_mdchgprocctr9902det_Entities/CTR9902" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Path="Delete_mc"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>Delete_mc</PropertyPath>
+                                <PropertyPath>Update_mc</PropertyPath>
+                                <PropertyPath>to_CTR9902T_oc</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_CTR9902T"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Path="to_CTR9902T_oc"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_RecordMessages"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_RecordTarget"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>Delete_mc</PropertyPath>
+                                <PropertyPath>Update_mc</PropertyPath>
+                                <PropertyPath>to_CTR9902T_oc</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonUpdatableNavigationProperties">
+                            <Collection>
+                                <PropertyPath>to_CTR9902T</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Updatable" Path="Update_mc"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.cds_ui_mdchgprocctr9902det_Entities/CTR9902T" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Path="Delete_mc"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>Delete_mc</PropertyPath>
+                                <PropertyPath>Update_mc</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_CTR9902"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_RecordMessages"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>Delete_mc</PropertyPath>
+                                <PropertyPath>Update_mc</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonUpdatableNavigationProperties">
+                            <Collection>
+                                <PropertyPath>to_CTR9902</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Updatable" Path="Update_mc"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.cds_ui_mdchgprocctr9902det_Entities/C_MDChangeProcessGoalValueHelp" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.cds_ui_mdchgprocctr9902det_Entities/ProcessCTR9902Details" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>Update_mc</PropertyPath>
+                                <PropertyPath>MDChgProcEditIsVisible</PropertyPath>
+                                <PropertyPath>MDChgProcExportIsVisible</PropertyPath>
+                                <PropertyPath>MDChgProcStepIsAfterFederation</PropertyPath>
+                                <PropertyPath>MDChgProcCTR9902TIsHidden</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_CTR9902"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_CTR9902T"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>Update_mc</PropertyPath>
+                                <PropertyPath>MDChgProcEditIsVisible</PropertyPath>
+                                <PropertyPath>MDChgProcExportIsVisible</PropertyPath>
+                                <PropertyPath>MDChgProcStepIsAfterFederation</PropertyPath>
+                                <PropertyPath>MDChgProcCTR9902TIsHidden</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonUpdatableProperties">
+                            <Collection>
+                                <PropertyPath>MDChgProcessStepUUID</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Updatable" Path="Update_mc"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.cds_ui_mdchgprocctr9902det_Entities/RecordMessages" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>MDChgProcessMessageText</PropertyPath>
+                                <PropertyPath>MDChgProcessMessageLongTextURL</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>MDChgProcessMessageText</PropertyPath>
+                                <PropertyPath>MDChgProcessMessageLongTextURL</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.cds_ui_mdchgprocctr9902det_Entities/RecordTarget" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.cds_ui_mdchgprocctr9902det_Entities/Step" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>MDChangeProcessStepHasError</PropertyPath>
+                                <PropertyPath>MDChgProcStepNumberOfWarnings</PropertyPath>
+                                <PropertyPath>MDChgProcessStepNumberOfErrors</PropertyPath>
+                                <PropertyPath>MDChgProcStpNumberOfExceptions</PropertyPath>
+                                <PropertyPath>MDChgProcStepScheduleIsRecmdd</PropertyPath>
+                                <PropertyPath>MDChgProcessSrceSystem</PropertyPath>
+                                <PropertyPath>MDChgProcessSrceObject</PropertyPath>
+                                <PropertyPath>MDChgProcStepIsRollbackAllowed</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>MDChangeProcessStepHasError</PropertyPath>
+                                <PropertyPath>MDChgProcStepNumberOfWarnings</PropertyPath>
+                                <PropertyPath>MDChgProcessStepNumberOfErrors</PropertyPath>
+                                <PropertyPath>MDChgProcStpNumberOfExceptions</PropertyPath>
+                                <PropertyPath>MDChgProcStepScheduleIsRecmdd</PropertyPath>
+                                <PropertyPath>MDChgProcessSrceSystem</PropertyPath>
+                                <PropertyPath>MDChgProcessSrceObject</PropertyPath>
+                                <PropertyPath>MDChgProcStepIsRollbackAllowed</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="true"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902TType/CountryName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902TType/CountryShortName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902TType/NationalityLongName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902TType/NationalityName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/Country" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/CountryISOCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/CountryThreeDigitISOCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/CountryThreeLetterISOCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/IsEuropeanUnionMember" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/MDChgProcessValidationStatus" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessCurrentStepNumber" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessNmbrOfSrceRecords" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessSrceObjectTypeCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStep" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepAdapter" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepAdapterConfign" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepChkPointIsActv" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepConfign" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepDescription" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepFilterChain" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepFinishDateTime" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepOriglNumber" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepOriglSqncNmbr" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepStartDateTime" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepStartIsReqd" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepStatus" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepWrkflwDefID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepWrkflwHandle" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepWrkflwOvrlDcsn" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepWrkflwSts" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStpOwnConfignIsRqd" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MasterDataChangeProcess" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MasterDataChangeProcessUUID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcIsAdhocStep" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcessStepAdapter" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcessStepAdapterConfign" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcessStepChkPointIsActv" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcessStepConfign" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcessStepUUID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcessStepWrkflwHandle" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcessStepWrkflwOvrlDcsn" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcessStepWrkflwSts" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcessStpOwnConfignIsRqd" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MasterDataChangeProcess" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MasterDataChangeProcessUUID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Optional"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepUUID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.Immutable"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.cds_ui_mdchgprocctr9902det_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Org.OData.Capabilities.V1.BatchSupport">
+                    <Record Type="Org.OData.Capabilities.V1.BatchSupportType">
+                        <PropertyValue Property="ReferencesAcrossChangeSetsSupported" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.CurrencyCodes">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__Currencies"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.UnitsOfMeasure">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__UnitsOfMeasure"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
+                    <Record>
+                        <PropertyValue Property="DocumentDescriptionReference" String="./$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="SAP__MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="Padding" Bool="true"/>
+                        <PropertyValue Property="HeaderFooter" Bool="true"/>
+                        <PropertyValue Property="IANATimezoneFormat" Bool="true"/>
+                        <PropertyValue Property="TextDirectionLayout" Bool="true"/>
+                        <PropertyValue Property="UploadToFileShare" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
+                        <PropertyValue Property="Treeview" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.SAP__DocumentDescription">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__MyDocumentDescriptions"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.RecordMessagesType/SystemMessageVariable2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SYMSGV&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.C_MDChangeProcessGoalValueHelpType/MDChgProcessGoal" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MDC_PROCESS_GOAL&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.RecordMessagesType/SystemMessageVariable4" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SYMSGV&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepWrkflwSts" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SWF_CPWF_STATE&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.RecordMessagesType/MDChangeProcessMessageID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SYMSGID&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/CountryThreeLetterISOCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=INTCA3&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.RecordMessagesType/MDChgProcMsgNumberLogHandle" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BALMNR&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902TType/CountryName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=LANDX50&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.C_MDChangeProcessGoalValueHelpType/MDChgProcessGoal_Text" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VAL_TEXT&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessGoalName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VAL_TEXT&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcessStepAdapter" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MDC_ADAPTER&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepAdapter" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MDC_ADAPTER&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.RecordMessagesType/MDChgProcMessageLogHandle" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BALLOGHNDL&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChangeProcStepProgressUnit" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MSEHI&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/CountryISOCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=INTCA&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.RecordTargetType/MDChgProcessActivationTarget" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MDC_ACTIVATION_TARGET_MULT&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.RecordMessagesType/SystemMessageVariable3" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SYMSGV&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.RecordMessagesType/SystemMessageVariable1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SYMSGV&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/Country" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=LAND1&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.Itmdchgprocessgetgradesresult/Number" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SYMSGNO&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.Itmdchgprocessgetgradesresult/Id" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SYMSGID&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/IsEuropeanUnionMember" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=XEGLD&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.Itmdchgprocessgetgradesresult/Class" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BALPROBCL&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.RecordMessagesType/MDChangeProcessMessageType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SYMSGTY&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessGoal" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MDC_PROCESS_GOAL&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcessStepWrkflwSts" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SWF_CPWF_STATE&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/CountryThreeDigitISOCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=INTCN3&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902TType/Language" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SPRAS&amp;origin=IS1_100"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__Currency/CurrencyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.Text" Path="Text"/>
+                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
+                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__UnitOfMeasure/UnitCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.Text" Path="Text"/>
+                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
+                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
+                <Annotation Term="SAP__CodeList.ExternalCode" Path="ExternalCode"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__UnitOfMeasure" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.AlternateKeys">
+                    <Collection>
+                        <Record>
+                            <PropertyValue Property="Key">
+                                <Collection>
+                                    <Record>
+                                        <PropertyValue Property="Name" Path="ExternalCode"/>
+                                        <PropertyValue Property="Alias" String="ExternalCode"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription/CreatedBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.Computed"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription/CreatedAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.Computed"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__Format/TextDirectionLayout" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.Description" String="Setting the text direction-layout is supported"/>
+                <Annotation Term="SAP__core.LongDescription" String="PDF supports setting the text direction-layout (e.g. left-to-right or right-to-left) in the document description"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__DocumentDescription" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__capabilties.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilties.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilties.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilties.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Format/Orientation"/>
+                                    <PropertyValue Property="AllowedExpressions" String="Multivalue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Format/PaperSize"/>
+                                    <PropertyValue Property="AllowedExpressions" String="Multivalue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__Format/FitToPage/ErrorRecoveryBehavior" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="../../../../SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27ErrorRecoveryBehaviour%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__Format/FontName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27FontName%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__Format/PaperSize" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27PaperSize%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__PDFHeader/Left" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__PDFHeader/Right" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__PDFHeader/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__PDFFooter/Left" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__PDFFooter/Right" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__PDFFooter/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__TableColumns/Format/Display_Format" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27TableColumnFormat%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__FileShare" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27FileShare%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__Format/Orientation" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27FontName%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.SAP__TableColumns/HorizontalAlignment" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HorizontalAlignment%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <atom:link rel="self" href="/sap/opu/odata/sap/UI_MDCHGPROCCTR9902DET/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="/sap/opu/odata/sap/UI_MDCHGPROCCTR9902DET/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ODM',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.ODM.v1" Alias="SAP__ODM"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/ui_mdchgprocctr9902det/$metadata">
+        <edmx:Include Namespace="UI_MDCHGPROCCTR9902DET" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="ui_mdchgprocctr9902det_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/Delete_mc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/Update_mc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902Type/to_CTR9902T_oc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902TType/Delete_mc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.CTR9902TType/Update_mc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType/MDChgProcessStepUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.StepType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MasterDataChangeProcess"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MDChgProcessStep"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.C_MDChangeProcessGoalValueHelpType/MDChgProcessGoal">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.C_MDChangeProcessGoalValueHelpType">
+                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessNmbrOfSrceRecords">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MasterDataChangeProcessUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStep">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessSrceObjectTypeCode">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepDescription">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepAdapter">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepAdapterConfign">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepChkPointIsActv">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepOriglNumber">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepOriglSqncNmbr">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepStartIsReqd">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepFilterChain">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepStartDateTime">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepFinishDateTime">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepConfign">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStpOwnConfignIsRqd">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessGoalName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessCurrentStepNumber">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepWrkflwDefID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepWrkflwHandle">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepWrkflwSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepWrkflwOvrlDcsn">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepTypeName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcEditIsVisible">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcExportIsVisible">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcStepIsAfterFederation">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcCTR9902TIsHidden">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/Update_mc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessStepType">
+                <Annotation Term="Common.Text" Path="MDChgProcessStepTypeName">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType/MDChgProcessGoal">
+                <Annotation Term="Common.Text" Path="MDChgProcessGoalName">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_mdchgprocctr9902det.ProcessCTR9902DetailsType">
+                <Annotation Term="UI.DataPoint" Qualifier="HeaderRecordsDataPoint">
+                    <Record>
+                        <PropertyValue Property="Value" Path="MDChgProcessNmbrOfSrceRecords"/>
+                        <PropertyValue Property="Title" String="Records"/>
+                        <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Number"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Ctr9902"/>
+                            <PropertyValue Property="ID" String="_CTR9902"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_CTR9902/@UI.LineItem"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Ctr9902t"/>
+                            <PropertyValue Property="ID" String="_CTR9902T"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_CTR9902T/@UI.LineItem"/>
+                            <Annotation Term="UI.Hidden" Path="MDChgProcCTR9902TIsHidden"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.HeaderFacets">
+                    <Collection>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="ID" String="HeaderDetailsColl"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Details"/>
+                                        <PropertyValue Property="ID" String="HeaderDetails"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#HeaderDetails"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="ID" String="HeaderRecords"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="ID" String="HeaderRecordsTitle"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#HeaderRecordsTitle"/>
+                                    </Record>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="ID" String="HeaderRecordsDataPoint"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#HeaderRecordsDataPoint"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="HeaderDetails">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MDChgProcessGoal"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MDChgProcessStepType"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Process"/>
+                        <PropertyValue Property="TypeNamePlural" String="Processes"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="MDChgProcessDescription"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Process ID"/>
+                                <PropertyValue Property="Value" Path="MasterDataChangeProcess"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MasterDataChangeProcess"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MDChgProcessDescription"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MDChgProcessNmbrOfSrceRecords"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MDChgProcessStepType"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="MaxItems" Int="3"/>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="MasterDataChangeProcess"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="RequestAtLeast">
+                            <Collection>
+                                <PropertyPath>MDChgProcessSrceObjectTypeCode</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>MasterDataChangeProcess</PropertyPath>
+                        <PropertyPath>MDChgProcessDescription</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="_Entities"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,33 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Jan 14 2026 13:22:27 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "http://is1r3.itego.de:53600/sap/opu/odata/sap/UI_MDCHGPROCCTR9902DET",
+    "appName": "mass9902",
+    "appTitle": "Mass Edit for CTR9902",
+    "appDescription": "Mass Edit for CTR9902",
+    "appNamespace": "customer",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.136.0",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.20.0",
+    "template": "List Report Page V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "CTR9902"
+      },
+      {
+        "type": "Navigation Entity",
+        "value": "None"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

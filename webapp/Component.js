@@ -1,5 +1,5 @@
 sap.ui.define(
-    ["sap/suite/ui/generic/template/lib/AppComponent"],
+    ["sap/nw/core/md/mdc/reuse/lib/mass/AppComponent"],
     function (Component) {
         "use strict";
 

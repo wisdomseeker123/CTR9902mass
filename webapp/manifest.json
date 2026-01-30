@@ -15,6 +15,30 @@
       "version": "1.20.0",
       "toolsId": "a6f2253c-d940-442b-9871-60a620090239"
     },
+    "crossNavigation": {
+      "inbounds": {
+        "displayEditRecords": {
+          "semanticObject": "GovProcessCTR9902",
+          "action": "massChange",
+          "signature": {
+            "parameters": {
+              "MDChgProcessStepUUID": {
+                "required": true
+              },
+              "MasterDataChangeProcessUUID": {
+                "required": false
+              },
+              "sap-xapp-state": {
+                "required": false
+              }
+            },
+            "additionalParameters": "ignored"
+          }
+        }
+      },
+      "outbounds": {
+      }
+    },
     "dataSources": {
       "UI_MDCHGPROCCTR9902DET_VAN": {
         "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='UI_MDCHGPROCCTR9902DET_VAN',Version='0001')/$value/",
@@ -71,7 +95,21 @@
         "sap.f": {},
         "sap.ui.comp": {},
         "sap.ui.generic.app": {},
-        "sap.suite.ui.generic.template": {}
+        "sap.suite.ui.generic.template": {},
+        "sap.nw.core.md.mdc.reuse.lib" : {}
+      }
+    },
+      "components": {
+        "sap.nw.core.md.mdc.reuse.lib": {}
+      },
+    "extends": {
+      "component": "customer.mass9902",
+      "extensions": {
+        "sap.ui.controllerExtensions": {
+          "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+            "controllerName": "customer.mass9902.ext.controller.ObjectPageExt"
+          }
+        }
       }
     },
     "contentDensities": {
@@ -120,8 +158,8 @@
       "showDraftToggle": false
     },
     "pages": {
-      "ListReport|CTR9902": {
-        "entitySet": "CTR9902",
+      "ListReport|ProcessCTR9902Details": {
+        "entitySet": "ProcessCTR9902Details",
         "component": {
           "name": "sap.suite.ui.generic.template.ListReport",
           "list": true,
@@ -140,8 +178,8 @@
           }
         },
         "pages": {
-          "ObjectPage|CTR9902": {
-            "entitySet": "CTR9902",
+          "ObjectPage|ProcessCTR9902Details": {
+            "entitySet": "ProcessCTR9902Details",
             "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
             "component": {
               "name": "sap.suite.ui.generic.template.ObjectPage"
